@@ -122,6 +122,28 @@
       margin-bottom: 0;
     }
 
+    .info-line {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .info-icon {
+      width: 14px;
+      height: 14px;
+      flex-shrink: 0;
+      color: #222;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .info-icon svg {
+      width: 14px;
+      height: 14px;
+      display: block;
+    }
+
     .container {
       flex: 1;
     }
@@ -305,12 +327,31 @@
 
       <div class="profile-box">
         <p><strong>Seungchae Na</strong></p>
-        <p>Suwon, Republic of Korea</p>
-        <p>
-          Lab:
-          <a href="https://ycshin.oopy.io/" target="_blank" rel="noopener noreferrer">
-            Smart Logistics &amp; SCM
-          </a>
+
+        <p class="info-line">
+          <span class="info-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 21s-6-5.2-6-11a6 6 0 1 1 12 0c0 5.8-6 11-6 11z"></path>
+              <circle cx="12" cy="10" r="2.2"></circle>
+            </svg>
+          </span>
+          <span>Suwon, Republic of Korea</span>
+        </p>
+
+        <p class="info-line">
+          <span class="info-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M10 3h4"></path>
+              <path d="M11 3v5l-5 8a4 4 0 0 0 3.4 6h5.2A4 4 0 0 0 18 16l-5-8V3"></path>
+              <path d="M9 14h6"></path>
+            </svg>
+          </span>
+          <span>
+            Lab:
+            <a href="https://ycshin.oopy.io/" target="_blank" rel="noopener noreferrer">
+              Smart Logistics &amp; SCM
+            </a>
+          </span>
         </p>
       </div>
     </aside>
