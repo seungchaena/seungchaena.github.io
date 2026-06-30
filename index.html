@@ -30,15 +30,28 @@
 
     .top-nav ul {
       display: flex;
-      gap: 28px;
+      justify-content: space-between;
+      align-items: center;
       list-style: none;
+      width: 100%;
+      max-width: 1200px;
       padding: 0 0 14px;
-      margin: 0;
+      margin: 0 auto;
       border-bottom: 1px solid #222;
     }
 
     .top-nav li {
       margin: 0;
+      flex: 1;
+      text-align: center;
+    }
+
+    .top-nav li:first-child {
+      text-align: left;
+    }
+
+    .top-nav li:last-child {
+      text-align: right;
     }
 
     .top-nav a {
@@ -57,6 +70,8 @@
       display: flex;
       gap: 40px;
       align-items: flex-start;
+      max-width: 1200px;
+      margin: 0 auto;
       padding: 36px 60px 60px;
     }
 
@@ -100,7 +115,6 @@
     }
 
     .container {
-      max-width: 900px;
       flex: 1;
     }
 
@@ -169,8 +183,7 @@
       }
 
       .top-nav ul {
-        flex-wrap: wrap;
-        gap: 18px;
+        gap: 12px;
       }
 
       .top-nav a {
@@ -219,8 +232,6 @@
       <li><a href="#profile">Profile</a></li>
       <li><a href="#education">Education</a></li>
       <li><a href="#publications">Publications</a></li>
-      <li><a href="#patents">Patents</a></li>
-      <li><a href="#projects">Projects</a></li>
     </ul>
   </nav>
 
@@ -288,24 +299,6 @@
         <ul class="paper-list">
           <li>TBU</li>
         </ul>
-      </section>
-
-      <section id="patents">
-        <h2>Patents</h2>
-        <hr>
-
-        <ol>
-          <li>Patent information will be added here.</li>
-        </ol>
-      </section>
-
-      <section id="projects">
-        <h2>Projects</h2>
-        <hr>
-
-        <ol>
-          <li>Project information will be added here.</li>
-        </ol>
       </section>
 
     </main>
