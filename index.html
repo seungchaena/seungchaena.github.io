@@ -155,6 +155,19 @@
       margin: 0 0 10px;
     }
 
+    .profile-divider {
+      border: none;
+      border-top: 1px solid #555;
+      width: 100%;
+      margin: 18px 0 18px;
+    }
+
+    .education-title {
+      font-size: 21px;
+      font-weight: 700;
+      margin: 0 0 12px;
+    }
+
     ul,
     ol {
       padding-left: 22px;
@@ -269,6 +282,10 @@
         font-size: 18px;
       }
 
+      .education-title {
+        font-size: 20px;
+      }
+
       ul,
       ol,
       .education-list,
@@ -284,7 +301,6 @@
   <nav class="top-nav">
     <ul>
       <li><a href="#profile" class="active">Profile</a></li>
-      <li><a href="#education">Education</a></li>
       <li><a href="#publications">Publications</a></li>
       <li><a href="#projects">Projects</a></li>
     </ul>
@@ -321,11 +337,10 @@
           <li>E-mail: <a href="mailto:seungchae@ajou.ac.kr">seungchae@ajou.ac.kr</a></li>
           <li>Phone: +82-10-7633-0538</li>
         </ul>
-      </section>
 
-      <section id="education">
-        <h2>Education</h2>
-        <hr>
+        <hr class="profile-divider">
+
+        <h3 class="education-title">Education</h3>
 
         <div class="education-list">
           <div class="education-row">
