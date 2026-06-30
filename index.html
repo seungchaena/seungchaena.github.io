@@ -240,13 +240,61 @@
       color: #1d4ed8;
     }
 
-    @media (max-width: 768px) {
+    /*
+      화면이 좁아졌을 때:
+      왼쪽 프로필 영역을 상단으로 올리고,
+      사진과 자기소개 박스를 작게 가로 배치
+    */
+    @media (max-width: 900px) {
       .top-nav {
-        padding: 24px 24px 0;
+        padding: 24px 36px 0;
       }
 
       .top-nav ul {
         flex-wrap: wrap;
+      }
+
+      .page-layout {
+        flex-direction: column;
+        gap: 28px;
+        padding: 32px 36px 56px;
+      }
+
+      .left-panel {
+        width: 100%;
+        display: flex;
+        align-items: stretch;
+        gap: 16px;
+      }
+
+      .photo-box {
+        width: 115px;
+        height: 145px;
+        flex-shrink: 0;
+      }
+
+      .profile-box {
+        width: auto;
+        flex: 1;
+        min-height: 145px;
+        margin-top: 0;
+        padding: 14px 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .container {
+        width: 100%;
+      }
+    }
+
+    /*
+      아주 작은 화면에서는 사진과 자기소개를 세로로 배치
+    */
+    @media (max-width: 560px) {
+      .top-nav {
+        padding: 24px 24px 0;
       }
 
       .top-nav li:not(:last-child)::after {
@@ -259,18 +307,23 @@
       }
 
       .page-layout {
-        flex-direction: column;
-        padding: 36px 24px;
+        padding: 32px 24px 48px;
       }
 
       .left-panel {
-        width: 100%;
+        flex-direction: column;
+        gap: 14px;
       }
 
-      .photo-box,
+      .photo-box {
+        width: 160px;
+        height: 200px;
+      }
+
       .profile-box {
         width: 100%;
         max-width: 320px;
+        min-height: auto;
       }
 
       .education-row,
