@@ -7,6 +7,19 @@
   <title>Seungchae Na</title>
 
   <style>
+    :root {
+      --bg: #f6f6f4;
+      --panel: #ffffff;
+      --text: #222222;
+      --muted: #666666;
+      --soft-muted: #888888;
+      --line: #d6d6d1;
+      --line-dark: #3a3a3a;
+      --hover: #ececea;
+      --photo-bg: #eeeeec;
+      --link: #333333;
+    }
+
     * {
       box-sizing: border-box;
     }
@@ -18,14 +31,14 @@
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      color: #222;
-      background-color: #ffffff;
+      color: var(--text);
+      background-color: var(--bg);
     }
 
     .top-nav {
       width: 100%;
       padding: 24px 60px 0;
-      background-color: #ffffff;
+      background-color: var(--bg);
     }
 
     .top-nav ul {
@@ -37,7 +50,7 @@
       max-width: 1200px;
       padding: 0 0 14px;
       margin: 0 auto;
-      border-bottom: 1px solid #222;
+      border-bottom: 1px solid var(--line-dark);
     }
 
     .top-nav li {
@@ -49,14 +62,14 @@
     .top-nav li:not(:last-child)::after {
       content: "|";
       margin: 0 14px;
-      color: #999;
+      color: var(--soft-muted);
       font-weight: 400;
     }
 
     .top-nav a {
       display: inline-block;
       padding: 6px 8px;
-      color: #666;
+      color: var(--muted);
       text-decoration: none;
       font-style: normal;
       font-size: 16px;
@@ -66,12 +79,12 @@
     }
 
     .top-nav a.active {
-      color: #222;
+      color: var(--text);
     }
 
     .top-nav a:hover {
-      color: #333;
-      background-color: #f0f0f0;
+      color: var(--text);
+      background-color: var(--hover);
     }
 
     .page-layout {
@@ -91,9 +104,10 @@
     .photo-box {
       width: 260px;
       height: 320px;
-      border: 1px solid #222;
+      border: 1px solid var(--line);
       overflow: hidden;
-      background-color: #f5f5f5;
+      background-color: var(--photo-bg);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
     }
 
     .photo-box img {
@@ -108,10 +122,11 @@
       min-height: 120px;
       margin-top: 16px;
       padding: 16px;
-      border: 1px solid #222;
-      background-color: #ffffff;
+      border: 1px solid var(--line);
+      background-color: var(--panel);
       font-size: 15px;
       line-height: 1.6;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
     }
 
     .profile-box p {
@@ -132,7 +147,7 @@
       width: 17px;
       height: 17px;
       flex-shrink: 0;
-      color: #222;
+      color: var(--text);
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -156,29 +171,33 @@
       font-size: 34px;
       font-weight: 700;
       margin: 0 0 12px;
+      color: var(--text);
     }
 
     h2 {
       font-size: 24px;
       font-weight: 700;
       margin: 40px 0 12px;
+      color: var(--text);
     }
 
     h3 {
       font-size: 19px;
       font-weight: 700;
       margin: 14px 0 8px;
+      color: var(--text);
     }
 
     .education-title {
       font-size: 24px;
       font-weight: 700;
       margin: 34px 0 12px;
+      color: var(--text);
     }
 
     hr {
       border: none;
-      border-top: 1px solid #222;
+      border-top: 1px solid var(--line);
       width: 100%;
       margin: 0 0 10px;
     }
@@ -213,13 +232,13 @@
     .education-period,
     .project-period {
       font-weight: 400;
-      color: #333;
+      color: var(--muted);
       white-space: nowrap;
     }
 
     .education-content,
     .project-content {
-      color: #222;
+      color: var(--text);
     }
 
     .project-title {
@@ -230,7 +249,7 @@
     .project-detail {
       display: block;
       margin-top: 2px;
-      color: #444;
+      color: var(--muted);
     }
 
     .paper-list {
@@ -242,13 +261,16 @@
     }
 
     a {
-      color: #2563eb;
+      color: var(--link);
       text-decoration: underline;
+      text-underline-offset: 3px;
       font-style: italic;
+      transition: color 0.2s ease, background-color 0.2s ease;
     }
 
     a:hover {
-      color: #1d4ed8;
+      color: #000000;
+      background-color: var(--hover);
     }
 
     @media (max-width: 900px) {
