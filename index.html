@@ -248,7 +248,7 @@
 
     .project-detail-list {
       list-style: none;
-      margin: 2px 0 0;
+      margin: 4px 0 0;
       padding-left: 0;
       color: var(--muted);
       font-size: inherit;
@@ -258,13 +258,16 @@
     .project-detail-list li {
       position: relative;
       margin: 0;
-      padding-left: 0;
+      padding-left: 18px;
     }
 
     .project-detail-list li::before {
-      content: "·";
+      content: "•";
       position: absolute;
-      left: -14px;
+      left: 0;
+      top: 0;
+      font-size: 1.1em;
+      line-height: inherit;
       color: var(--muted);
     }
 
@@ -425,10 +428,6 @@
       .education-period,
       .project-period {
         white-space: normal;
-      }
-
-      .project-detail-list li::before {
-        left: -12px;
       }
 
       h1 {
